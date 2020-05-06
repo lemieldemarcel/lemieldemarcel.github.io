@@ -24,7 +24,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd le-miel-de-marcel
+
     - run: npm ci
+      working-directory: ./le-miel-de-marcel
+
     - run: npm run build --if-present
+      working-directory: ./le-miel-de-marcel
+      
     - run: npm test
+      working-directory: ./le-miel-de-marcel
