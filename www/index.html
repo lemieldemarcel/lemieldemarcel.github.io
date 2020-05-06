@@ -10,5 +10,15 @@
 </head>
 <body>
   <app-root>Chargement...</app-root>
+
+  <script>
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })
+  </script>
 <script type="text/javascript" src="/www/inline.bundle.js"></script><script type="text/javascript" src="/www/polyfills.bundle.js"></script><script type="text/javascript" src="/www/styles.bundle.js"></script><script type="text/javascript" src="/www/vendor.bundle.js"></script><script type="text/javascript" src="/www/main.bundle.js"></script></body>
 </html>
