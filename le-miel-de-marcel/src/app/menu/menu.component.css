@@ -1,0 +1,36 @@
+
+.menu-wrapper {
+  background-color: var(--argile-clair-color);
+  --menu-height : 75px;
+  --menu-width : 800px;
+}
+
+.menu-nav {
+}
+
+.menu-items {
+
+  height: var(--menu-height);
+  max-width: var(--menu-width);
+  margin: auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+
+  line-height: var(--menu-height);
+}
+
+.menu-item {
+  display: inline-block;
+  padding: 0 50px;
+  cursor: pointer;
+  color: var(--miel-fonce-couleur);
+  font-family: 'Modak', cursive;
+  font-size: 2rem;
+}
+.menu-item:hover {
+  background-color: var(--argile-fonce-color);
+  color: var(--miel-clair-couleur);
+}
